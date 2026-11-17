@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>メンバー募集｜白浜会 — 白浜で、メディアと場づくりを一緒につくる仲間へ</title>
+<meta name="description" content="白浜会の大学生メンバー募集ページ。地域メディア「Shirahama Days」、海の家プロジェクト、宿のインバウンド支援、調査・研究。募集ロールは演者・撮影・編集・企画。応募・相談は公式InstagramのDMから。">
+<style>
+  :root{
+    --ink:#26241f; --ink2:#5c564a; --faint:#6e6759;
+    --sea:#1d6b63; --sea-d:#123f3a;
+    --cream:#faf7f1; --cream2:#f3eee3; --line:#e2dac7;
+    --accent:#c8502e; --accent-d:#a93f22;
+    --radius:10px;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:"Hiragino Sans","Hiragino Kaku Gothic ProN","Noto Sans JP",sans-serif;color:var(--ink);line-height:1.85;background:#fff;-webkit-font-smoothing:antialiased}
+  :focus-visible{outline:2.5px solid var(--accent);outline-offset:2px;border-radius:2px}
+  .mincho{font-family:"Hiragino Mincho ProN","Hiragino Mincho Pro","Yu Mincho","YuMincho","Noto Serif JP",serif}
+  .wrap{max-width:1020px;margin:0 auto;padding:0 24px}
+  section{padding:96px 0;scroll-margin-top:70px}
+  .overline{font-size:12px;font-weight:700;letter-spacing:.3em;color:var(--sea);margin-bottom:12px}
+  h2{font-family:"Hiragino Mincho ProN","Hiragino Mincho Pro","Yu Mincho","YuMincho","Noto Serif JP",serif;font-size:30px;line-height:1.5;font-weight:600;margin-bottom:16px}
+  .lead{color:var(--ink2);max-width:700px;font-size:15.5px}
+  a{color:var(--sea)}
+  /* header */
+  header{position:sticky;top:0;z-index:50;background:rgba(250,247,241,.96);border-bottom:1px solid var(--line)}
+  header .wrap{display:flex;justify-content:space-between;align-items:center;padding-top:14px;padding-bottom:14px}
+  .logo{font-family:"Hiragino Mincho ProN","Yu Mincho",serif;font-size:23px;font-weight:600;letter-spacing:.18em;line-height:1.25}
+  .logo a{color:inherit;text-decoration:none}
+  .logo small{display:block;font-size:9.5px;letter-spacing:.3em;color:var(--faint);font-family:"Hiragino Sans",sans-serif;font-weight:600}
+  nav{display:flex;gap:22px;align-items:center}
+  nav a{color:var(--ink);text-decoration:none;font-size:13.5px;font-weight:600}
+  nav a:hover{color:var(--sea)}
+  nav a.nav-cta{border:1.5px solid var(--accent);color:var(--accent);padding:7px 18px;border-radius:999px;font-weight:700}
+  nav a.nav-cta:hover{background:var(--accent);color:#fff}
+  /* hero */
+  .hero{background:var(--cream);padding:84px 0 72px;border-bottom:1px solid var(--line)}
+  .hero .area{font-size:13px;font-weight:700;letter-spacing:.26em;color:var(--sea);margin-bottom:26px}
+  .hero h1{font-family:"Hiragino Mincho ProN","Hiragino Mincho Pro","Yu Mincho","YuMincho","Noto Serif JP",serif;font-size:42px;line-height:1.55;font-weight:600;max-width:720px}
+  .hero h1 .u{border-bottom:3px solid var(--accent);padding-bottom:2px}
+  .hero .sub{margin-top:26px;font-size:16px;color:var(--ink2);max-width:640px}
+  .btns{display:flex;gap:14px;flex-wrap:wrap;margin-top:34px}
+  .cta{display:inline-block;background:var(--accent);color:#fff;padding:15px 34px;border-radius:999px;text-decoration:none;font-weight:700;font-size:15.5px;transition:.2s}
+  .cta:hover{background:var(--accent-d)}
+  .ghost{display:inline-block;background:transparent;border:1.5px solid var(--ink);color:var(--ink);padding:13.5px 28px;border-radius:999px;text-decoration:none;font-weight:700;font-size:15px}
+  .ghost:hover{background:var(--ink);color:#fff}
+  /* cards */
+  .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px;margin-top:36px}
+  .card{border:1px solid var(--line);border-radius:var(--radius);padding:28px;background:#fff}
+  .card h3{font-family:"Hiragino Mincho ProN","Yu Mincho",serif;font-size:18px;font-weight:600;margin-bottom:10px;line-height:1.55}
+  .card p{font-size:14.5px;color:var(--ink2)}
+  .card .more{margin-top:12px;font-size:14px}
+  .card ul{list-style:none;margin-top:4px}
+  .card ul li{font-size:14.5px;color:var(--ink2);padding-left:1.2em;text-indent:-1.2em;margin-bottom:6px}
+  .card ul li::before{content:"— ";color:var(--sea);font-weight:700}
+  .note{font-size:12.5px;color:var(--faint);margin-top:14px}
+  .muted{font-size:13px;color:var(--faint)}
+  .center-cta{text-align:center;margin-top:38px}
+  /* tables */
+  table{width:100%;border-collapse:collapse;font-size:14.5px;margin-top:32px;background:#fff}
+  th,td{padding:15px 16px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line)}
+  th.rowhead{background:var(--cream2);font-weight:700;white-space:nowrap;width:220px}
+  td .tbd{color:var(--faint)}
+  /* steps */
+  .steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(215px,1fr));gap:20px;margin-top:36px}
+  .step{border-top:3px solid var(--sea);padding-top:18px}
+  .step .num{font-family:"Hiragino Mincho ProN","Yu Mincho",serif;font-size:26px;color:var(--sea);font-weight:600}
+  .step h3{font-size:16.5px;margin:6px 0 6px;font-weight:700}
+  .step p{font-size:14px;color:var(--ink2)}
+  /* cta band */
+  .band{background:var(--sea-d);color:#fff;text-align:center;padding:84px 0}
+  .band h2{color:#fff}
+  .band p{color:#cfded9;max-width:560px;margin:0 auto;font-size:15px}
+  .band .cta{margin-top:28px}
+  /* footer */
+  footer{background:#211d16;color:#ddd6c6;padding:56px 0 42px;font-size:14px}
+  footer a{color:#ddd6c6}
+  footer .f-title{font-family:"Hiragino Mincho ProN","Yu Mincho",serif;font-size:18px;font-weight:600;margin-bottom:10px;color:#fff}
+  footer .note{color:#9b927e}
+  footer .f-links{list-style:none;margin-top:6px}
+  footer .f-links li{margin-bottom:8px}
+  /* mobile */
+  .sticky-cta{display:none}
+  @media (max-width:760px){
+    nav a:not(.nav-cta){display:none}
+    .hero{padding-top:56px}
+    .hero h1{font-size:29px;line-height:1.6}
+    section{padding:64px 0}
+    h2{font-size:25px}
+    .sticky-cta{display:block;position:fixed;left:0;right:0;bottom:0;z-index:60;background:rgba(250,247,241,.97);border-top:1px solid var(--line);padding:10px 16px calc(10px + env(safe-area-inset-bottom))}
+    .sticky-cta a{display:block;text-align:center;background:var(--accent);color:#fff;font-weight:700;text-decoration:none;border-radius:999px;padding:13px}
+    body{padding-bottom:66px}
+    th.rowhead{white-space:normal;width:auto}
+  }
+
+  /* ==== readability pass 2026-11-17 (evidence-based) ==== */
+  body{font-size:17px;line-break:strict}
+  p{max-width:40em}
+  .lead{font-size:17px;max-width:40em}
+  .note{font-size:13.5px;color:var(--faint)}
+  .muted{font-size:13.5px}
+  h2{line-height:1.4}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <div class="logo"><a href="../">白浜会<small>SHIRAHAMAKAI</small></a></div>
+    <nav>
+      <a href="#activities">活動内容</a>
+      <a href="#roles">募集ロール</a>
+      <a href="#how">活動の実際</a>
+      <a href="#faq">よくある質問</a>
+      <a class="nav-cta" href="#apply">応募する</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <p class="area">和歌山県白浜町・熊野エリア｜大学生メンバー募集</p>
+    <h1>白浜で、メディアと場づくりを<br>一緒につくる<span class="u">仲間</span>を募集しています</h1>
+    <p class="sub">白浜会は、白浜と熊野を拠点に、地域メディアの運営、海の家プロジェクト、宿のインバウンド支援、調査・研究に取り組む団体です。活動を一緒に前に進める、大学生の仲間を募集しています。</p>
+    <div class="btns">
+      <a class="cta" href="#apply">応募・相談する</a>
+      <a class="ghost" href="#activities">活動内容を見る</a>
+    </div>
+    <p class="note">※ 応募・相談は公式Instagram（@shirahamakai）のDMで受け付けています。応募フォームは準備中です。</p>
+  </div>
+</section>
+
+<section id="activities">
+  <div class="wrap">
+    <p class="overline">ACTIVITIES</p>
+    <h2>活動内容</h2>
+    <p class="lead">白浜会の活動は、4つの柱でできています。メンバーは、興味のある柱から関わり始めます。</p>
+    <div class="cards">
+      <div class="card">
+        <h3>地域メディア「Shirahama Days」</h3>
+        <p>Instagramで白浜と熊野の記録を発信する地域メディアの運営。メンバーは企画・撮影・編集から、投稿後の数値での振り返りまで関わります。</p>
+        <p class="more"><a href="https://www.instagram.com/shirahama.days/" target="_blank" rel="noopener">@shirahama.days を見る</a></p>
+      </div>
+      <div class="card">
+        <h3>海の家プロジェクト</h3>
+        <p>夏の看板事業です。白良浜の海の家（2027年夏オープン予定）の開業準備と運営に向け、場の運営と集客・発信が一体になる実践の場です。</p>
+        <p class="more"><a href="../beach/">海の家しららはま のページ</a></p>
+      </div>
+      <div class="card">
+        <h3>宿向けインバウンド整備支援</h3>
+        <p>南紀・熊野・白浜の小規模な宿・体験事業者のために、Googleマップ・OTA・英語ページの整備を支援する事業。メンバーは調査や英語コンテンツづくりに関わります。</p>
+        <p class="more"><a href="../">事業の詳細（トップページ）</a></p>
+      </div>
+      <div class="card">
+        <h3>調査・研究</h3>
+        <p>2030年開業予定の大阪IR（統合型リゾート）と地域観光の接続の研究など、地域の未来を見据えた活動。メンバーは資料調査や現地でのヒアリングに関わります。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="roles" style="background:var(--cream)">
+  <div class="wrap">
+    <p class="overline">ROLES</p>
+    <h2>募集ロール</h2>
+    <p class="lead">いま特に担い手を求めている、4つのロールです。</p>
+    <div class="cards">
+      <div class="card">
+        <h3>演者</h3>
+        <p>リールなどの動画への出演、現地での案内・紹介役。地域のスポットや活動の様子を、見た人に伝わる形で届けます。人前で伝える経験が積めます。</p>
+      </div>
+      <div class="card">
+        <h3>撮影</h3>
+        <p>白浜・熊野の現地撮影（写真・動画）。スポット、活動の過程、人の営みを記録します。現場を見て、切り取る力が鍛えられます。</p>
+      </div>
+      <div class="card">
+        <h3>編集</h3>
+        <p>リール・投稿の編集、テロップ・構成づくり。投稿のPDCA（仮説検証）に沿って、数字を見ながら改善を回します。編集と運用の両方の経験が積めます。</p>
+      </div>
+      <div class="card">
+        <h3>企画</h3>
+        <p>企画立案、取材・連携先との調整、プロジェクトの進行管理。地域の事業者と直接やり取りしながら、企画を形にする経験が積めます。</p>
+      </div>
+    </div>
+    <p class="note">出演は固定の顔にせず持ち回りで担当し、個人名は前面に出しません。ロールの兼務や分担の進め方などの詳細は、追って公開します。</p>
+    <div class="center-cta"><a class="cta" href="#apply">応募・相談する</a></div>
+  </div>
+</section>
+
+<section id="how">
+  <div class="wrap">
+    <p class="overline">HOW WE WORK</p>
+    <h2>活動の実際</h2>
+    <p class="lead">期待と現実のズレを防ぐため、分かっていることから正直に書きます。詳細が決まり次第、このページで更新します。</p>
+    <table>
+      <tr><th class="rowhead">主な活動場所</th><td>和歌山県白浜町および熊野エリア</td></tr>
+      <tr><th class="rowhead">進め方</th><td>企画 → 制作 → 投稿 → 数値で振り返り（PDCA）を、コンテンツ1本ずつ回します</td></tr>
+      <tr><th class="rowhead">活動頻度・定例会議</th><td><span class="tbd">詳細は追って公開します</span></td></tr>
+      <tr><th class="rowhead">応募資格</th><td><span class="tbd">所属大学・学年・居住地の条件など、詳細は追って公開します</span></td></tr>
+      <tr><th class="rowhead">費用負担</th><td><span class="tbd">会費・交通費などの扱いは、詳細は追って公開します</span></td></tr>
+    </table>
+  </div>
+</section>
+
+<section id="gain" style="background:var(--cream)">
+  <div class="wrap">
+    <p class="overline">WHAT YOU GET</p>
+    <h2>得られるもの</h2>
+    <p class="lead">ここに書いたのは、いまの活動から確実に得られるものです。実績や事例が貯まれば、随時更新します。</p>
+    <div class="cards">
+      <div class="card">
+        <h3>地域メディアの運営実績</h3>
+        <p>企画・撮影・編集・数値検証まで、一貫して関わった経験が残ります。</p>
+      </div>
+      <div class="card">
+        <h3>実際の事業に関わる経験</h3>
+        <p>海の家や宿の支援など、机上ではない本物の事業に、学生の立場で関われます。</p>
+      </div>
+      <div class="card">
+        <h3>地域との接点</h3>
+        <p>地域の事業者や行政と関わる機会があります。白浜・熊野の現場の人と直接つながれます。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="fit">
+  <div class="wrap">
+    <p class="overline">FIT</p>
+    <h2>向いている人・向いていない人</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>向いている人</h3>
+        <ul>
+          <li>地域や人の営みに興味がある</li>
+          <li>作ったものを数値で振り返るのが嫌いじゃない</li>
+          <li>現地に足を運ぶのが苦にならない</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>向いていない人</h3>
+        <ul>
+          <li>短期間で大きなバズだけを求める</li>
+          <li>裏方の地道な作業を避けたい</li>
+        </ul>
+      </div>
+    </div>
+    <div class="center-cta"><a class="cta" href="#apply">応募・相談する</a></div>
+  </div>
+</section>
+
+<section id="faq" style="background:var(--cream)">
+  <div class="wrap">
+    <p class="overline">FAQ</p>
+    <h2>よくある質問</h2>
+    <p class="lead">活動頻度や参加条件などの詳細は、決まり次第このページで公開します。現時点での質問は、公式InstagramのDMで受け付けています。</p>
+    <div class="cards">
+      <div class="card"><h3>応募はどこからできますか</h3><p>現在は、公式Instagram（@shirahamakai）のDMで受け付けています。応募フォームは準備中です。DMには「名前」「興味のある役割」「一言」を添えてください。</p></div>
+      <div class="card"><h3>未経験でも大丈夫ですか</h3><p>必要な経験はロールによって異なります。詳しい方針は追って公開しますので、現時点ではDMでご相談ください。</p></div>
+      <div class="card"><h3>どれくらいの頻度で活動しますか</h3><p>活動頻度・定例会議の詳細は、追って公開します。</p></div>
+      <div class="card"><h3>白浜に住んでいなくても参加できますか</h3><p>応募資格の詳細は、追って公開します。</p></div>
+      <div class="card"><h3>選考はありますか</h3><p>応募後の流れの詳細は、追って公開します。</p></div>
+      <div class="card"><h3>費用はかかりますか</h3><p>会費・交通費などの扱いは、追って公開します。</p></div>
+    </div>
+  </div>
+</section>
+
+<div class="band">
+  <div class="wrap">
+    <h2>まずは、話を聞くところから。</h2>
+    <p>応募するか迷っている段階でも大丈夫です。公式InstagramのDMで、気軽に声をかけてください。</p>
+    <a class="cta" href="#apply">応募・相談する</a>
+  </div>
+</div>
+
+<section id="apply">
+  <div class="wrap">
+    <p class="overline">APPLY</p>
+    <h2>応募・相談</h2>
+    <p class="lead">応募フォームは現在準備中です。いまの応募・相談窓口は、公式Instagram（@shirahamakai）のDMです。DMには、次の3点を添えてください。</p>
+    <div class="steps">
+      <div class="step"><span class="num">1</span><h3>DMで応募・相談</h3><p>名前、興味のある役割（演者・撮影・編集・企画。「まだ分からない」でも構いません）、応募理由や興味を持ったきっかけを一言添えてください。</p></div>
+      <div class="step"><span class="num">2</span><h3>担当から返信</h3><p>内容を確認のうえ、担当から返信します。</p></div>
+      <div class="step"><span class="num">3</span><h3>顔合わせ</h3><p>活動の説明と顔合わせを行います。</p></div>
+      <div class="step"><span class="num">4</span><h3>参加</h3><p>活動に参加し、ロールを決めていきます。</p></div>
+    </div>
+    <p class="note">返信の目安など、流れの詳細は追って公開します。</p>
+    <div class="center-cta"><a class="cta" href="https://www.instagram.com/shirahamakai/" target="_blank" rel="noopener">Instagramで応募・相談する</a></div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p class="f-title">白浜会</p>
+    <ul class="f-links">
+      <li>公式Instagram（活動と募集）：<a href="https://www.instagram.com/shirahamakai/" target="_blank" rel="noopener">@shirahamakai</a></li>
+      <li>地域メディア「Shirahama Days」：<a href="https://www.instagram.com/shirahama.days/" target="_blank" rel="noopener">@shirahama.days</a></li>
+      <li>宿・体験事業者の方はこちら：<a href="../">トップページ（インバウンド整備支援）</a></li>
+    </ul>
+    <p class="note" style="margin-top:24px">最終更新：2026年11月17日<br>© 2026 白浜会</p>
+  </div>
+</footer>
+
+<div class="sticky-cta"><a href="#apply">応募・相談する</a></div>
+</body>
+</html>
