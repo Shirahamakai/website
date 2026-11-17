@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>外国人ゲストに見つけてもらうために、小さな宿がまずやること｜白浜会</title>
+<meta name="description" content="外国人客は増えているのに、予約に繋がらない。小さな宿が最初に整えるべき5つのこと（Googleマップ、口コミ返信、OTAの英語、英語ページ、検索の土台）を、公開データと事例で解説します。">
+<style>
+  :root{
+    --ink:#26241f; --ink2:#5c564a; --faint:#6e6759;
+    --sea:#1d6b63; --sea-d:#123f3a;
+    --cream:#faf7f1; --cream2:#f3eee3; --line:#e2dac7;
+    --accent:#c8502e; --accent-d:#a93f22;
+    --radius:10px;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:"Hiragino Sans","Hiragino Kaku Gothic ProN","Noto Sans JP",sans-serif;color:var(--ink);line-height:1.85;background:#fff;-webkit-font-smoothing:antialiased}
+  :focus-visible{outline:2.5px solid var(--accent);outline-offset:2px;border-radius:2px}
+  .mincho{font-family:"Hiragino Mincho ProN","Hiragino Mincho Pro","Yu Mincho","YuMincho","Noto Serif JP",serif}
+  .wrap{max-width:1020px;margin:0 auto;padding:0 24px}
+  section{padding:96px 0;scroll-margin-top:70px}
+  .overline{font-size:12px;font-weight:700;letter-spacing:.3em;color:var(--sea);margin-bottom:12px}
+  h2{font-family:"Hiragino Mincho ProN","Hiragino Mincho Pro","Yu Mincho","YuMincho","Noto Serif JP",serif;font-size:30px;line-height:1.5;font-weight:600;margin-bottom:16px}
+  .lead{color:var(--ink2);max-width:700px;font-size:15.5px}
+  /* header */
+  header{position:sticky;top:0;z-index:50;background:rgba(250,247,241,.96);border-bottom:1px solid var(--line)}
+  header .wrap{display:flex;justify-content:space-between;align-items:center;padding-top:14px;padding-bottom:14px}
+  .logo{font-family:"Hiragino Mincho ProN","Yu Mincho",serif;font-size:23px;font-weight:600;letter-spacing:.18em;line-height:1.25}
+  .logo small{display:block;font-size:9.5px;letter-spacing:.3em;color:var(--faint);font-family:"Hiragino Sans",sans-serif;font-weight:600}
+  nav{display:flex;gap:22px;align-items:center}
+  nav a{color:var(--ink);text-decoration:none;font-size:13.5px;font-weight:600}
+  nav a:hover{color:var(--sea)}
+  nav a.nav-cta{border:1.5px solid var(--accent);color:var(--accent);padding:7px 18px;border-radius:999px;font-weight:700}
+  nav a.nav-cta:hover{background:var(--accent);color:#fff}
+  /* hero */
+  .hero{background:var(--cream);padding:84px 0 0;border-bottom:1px solid var(--line)}
+  .hero .area{font-size:13px;font-weight:700;letter-spacing:.26em;color:var(--sea);margin-bottom:26px}
+  .hero h1{font-family:"Hiragino Mincho ProN","Hiragino Mincho Pro","Yu Mincho","YuMincho","Noto Serif JP",serif;font-size:42px;line-height:1.55;font-weight:600;max-width:720px}
+  .hero h1 .u{border-bottom:3px solid var(--accent);padding-bottom:2px}
+  .hero .sub{margin-top:26px;font-size:16px;color:var(--ink2);max-width:640px}
+  .hero .efficacy{margin-top:14px;font-size:16px;font-weight:700;color:var(--ink);max-width:640px}
+  .btns{display:flex;gap:14px;flex-wrap:wrap;margin-top:34px}
+  .cta{display:inline-block;background:var(--accent);color:#fff;padding:15px 34px;border-radius:999px;text-decoration:none;font-weight:700;font-size:15.5px;transition:.2s}
+  .cta:hover{background:var(--accent-d)}
+  .ghost{display:inline-block;background:transparent;border:1.5px solid var(--ink);color:var(--ink);padding:13.5px 28px;border-radius:999px;text-decoration:none;font-weight:700;font-size:15px}
+  .ghost:hover{background:var(--ink);color:#fff}
+  .hero-photo{margin-top:56px;height:380px;background:none center 42%/cover no-repeat}
+  .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;padding:30px 0 36px}
+  .stat{border-top:2px solid var(--sea);padding-top:12px}
+  .stat b{display:block;font-family:"Hiragino Mincho ProN","Yu Mincho",serif;font-size:23px;line-height:1.35;font-weight:600}
+  .stat span{font-size:12.5px;color:var(--ink2)}
+  /* cards */
+  .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px;margin-top:36px}
+  .card{border:1px solid var(--line);border-radius:var(--radius);padding:28px;background:#fff}
+  .card h3{font-family:"Hiragino Mincho ProN","Yu Mincho",serif;font-size:18px;font-weight:600;margin-bottom:10px;line-height:1.55}
+  .card p{font-size:14.5px;color:var(--ink2)}
+  .price{font-size:25px;font-weight:800;color:var(--sea);margin-top:16px}
+  .price small{font-size:12px;color:var(--faint);font-weight:500}
+  .lossbox{margin-top:22px;border:1px solid #eccdb8;background:#fdf8f2;border-left:5px solid var(--accent);border-radius:6px;padding:26px 28px}
+  .lossbox h3{font-family:"Hiragino Mincho ProN","Yu Mincho",serif;font-size:18px;font-weight:600;margin-bottom:8px}
+  .lossbox p{font-size:14.5px;color:var(--ink2)}
+  .lossbox strong{color:var(--accent-d);font-size:19px}
+  .center-cta{text-align:center;margin-top:38px}
+  /* sample sheet */
+  .sheet{border:1px solid var(--line);border-radius:var(--radius);background:var(--cream);padding:34px;margin-top:36px}
+  .sheet .tag{font-size:12px;font-weight:700;letter-spacing:.24em;color:var(--sea)}
+  .sheet .cards{margin-top:18px}
+  .sheet .card{background:#fff}
+  /* tables */
+  table{width:100%;border-collapse:collapse;font-size:14.5px;margin-top:32px;background:#fff}
+  th,td{padding:15px 16px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line)}
+  th.head{background:var(--sea-d);color:#fff;font-size:14.5px;font-weight:700}
+  th.rowhead{background:var(--cream2);font-weight:700;white-space:nowrap}
+  td.hl{background:#fdf3ec;font-weight:700}
+  .badge{display:inline-block;background:var(--accent);color:#fff;font-size:11px;font-weight:700;border-radius:999px;padding:2px 10px;margin-left:8px;vertical-align:2px}
+  .amt{font-weight:800;color:var(--sea);white-space:nowrap}
+  .note{font-size:12.5px;color:var(--faint);margin-top:14px}
+  .muted{font-size:13px;color:var(--faint)}
+  /* steps */
+  .steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(215px,1fr));gap:20px;margin-top:36px}
+  .step{border-top:3px solid var(--sea);padding-top:18px}
+  .step .num{font-family:"Hiragino Mincho ProN","Yu Mincho",serif;font-size:26px;color:var(--sea);font-weight:600}
+  .step h3{font-size:16.5px;margin:6px 0 6px;font-weight:700}
+  .step p{font-size:14px;color:var(--ink2)}
+  /* cta band */
+  .band{background:var(--sea-d);color:#fff;text-align:center;padding:84px 0}
+  .band h2{color:#fff}
+  .band p{color:#cfded9;max-width:560px;margin:0 auto;font-size:15px}
+  .band .cta{margin-top:28px}
+  /* footer */
+  footer{background:#211d16;color:#ddd6c6;padding:56px 0 42px;font-size:14px}
+  footer a{color:#ddd6c6}
+  footer .f-title{font-family:"Hiragino Mincho ProN","Yu Mincho",serif;font-size:18px;font-weight:600;margin-bottom:10px;color:#fff}
+  footer .note{color:#9b927e}
+  /* mobile */
+  .sticky-cta{display:none}
+  @media (max-width:760px){
+    nav a:not(.nav-cta){display:none}
+    .hero{padding-top:56px}
+    .hero h1{font-size:29px;line-height:1.6}
+    .hero-photo{height:220px;margin-top:38px}
+    .stats{grid-template-columns:1fr;gap:16px}
+    section{padding:64px 0}
+    h2{font-size:25px}
+    .sheet{padding:24px 20px}
+    .sticky-cta{display:block;position:fixed;left:0;right:0;bottom:0;z-index:60;background:rgba(250,247,241,.97);border-top:1px solid var(--line);padding:10px 16px calc(10px + env(safe-area-inset-bottom))}
+    .sticky-cta a{display:block;text-align:center;background:var(--accent);color:#fff;font-weight:700;text-decoration:none;border-radius:999px;padding:13px}
+    body{padding-bottom:66px}
+    th.rowhead{white-space:normal}
+  }
+
+  /* ==== readability pass 2026-11-17 (evidence-based) ==== */
+  body{font-size:17px;line-break:strict}
+  p{max-width:40em;margin:0 0 1.5em}
+  .lead{font-size:17px;max-width:40em}
+  .note{font-size:13.5px;color:var(--faint)}
+  .muted{font-size:13.5px}
+  h2{line-height:1.4}
+  .price small{font-size:12.5px}
+
+  .guide-body p{max-width:40em}
+  .guide-body h3{margin-top:36px}
+  .src{font-size:13px;color:var(--faint)}
+</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"外国人ゲストに見つけてもらうために、小さな宿がまずやること","author":{"@type":"Organization","name":"白浜会"},"publisher":{"@type":"Organization","name":"白浜会"},"datePublished":"2026-11-17","dateModified":"2026-11-17","inLanguage":"ja"}
+</script>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <div class="brand">SHIRAHAMAKAI <span class="jp">白浜会</span></div>
+    <nav class="links">
+      <a href="../">トップ</a><a href="../#services">サービス</a><a href="../#pricing">料金</a><a href="../#faq">よくある質問</a>
+      <a class="btn btn-sm" href="../#contact">無料診断を受ける</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <p class="kicker">ガイド｜小さな宿のインバウンド整備</p>
+    <h1>外国人ゲストに見つけてもらうために、<br>小さな宿がまずやること</h1>
+    <p class="lead">和歌山県の外国人宿泊者数は2025年に713,562人泊と過去最高になりました。客は来ています。それでも予約に繋がらない宿があるのは、「見つけてもらうための整備」が追いついていないからです。このページでは、最初に整えるべき5つのことを、公開データと事例で説明します。</p>
+    <p class="src">出典：和歌山県観光統計（2025年・速報値）</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap guide-body">
+    <h2>前提：お客様は、あなたの宿のサイトから見つけてくれません</h2>
+    <p>訪日客が旅行前に使う情報源は、SNS（43.3%）と動画サイト（39.6%）が上位です（観光庁調査）。発見はGoogle検索・Googleマップ・OTA・SNSで起き、公式サイトの役割は「見つけた人が、検証して、予約する受け皿」です。だから整備の順番は「発見される場所」からになります。</p>
+
+    <h2>まずやる5つのこと</h2>
+    <h3>1. Googleビジネスプロフィールを完全に埋める</h3>
+    <p>英語の施設名、営業時間、写真、提供サービス。ローカル検索の順位要因では、プロフィールの充実度と口コミが大きな比重を占めます（Whitespark調査）。未入力の項目があるだけで、候補から外れます。</p>
+    <h3>2. 口コミに、1週間以内に返信する</h3>
+    <p>消費者の89%が事業者からの返信を期待し、評価4.0未満の施設を検討から外す人が68%います（BrightLocal調査）。返信を始めた宿では評価と予約が有意に改善したという学術研究もあります（Proserpio &amp; Zervas, 2017）。英語の口コミには英語で返すのが理想です。</p>
+    <h3>3. 国際OTAの英語情報を「判断できる」状態にする</h3>
+    <p>掲載するだけでは足りません。部屋・食事・風呂・アクセスが英語で判断できることが条件です。ある温泉旅館では、Booking.comの英語プロフィールを全面改訂しただけで、外国人予約が月5件から18件に増えたと報告されています（支援事業者の公開事例）。</p>
+    <h3>4. 英語ページは「要点だけ」でも先に用意する</h3>
+    <p>料金（1人あたりか1室あたりか、税の扱い）、アクセス（駅・バス停からの時間と本数）、館内のルール（入浴、チェックイン）。この3点が読めるだけで、問い合わせの摩擦は大きく下がります。英語ページがあっても、予約判断に必要な項目が揃っている施設は10.3%しかないという調査もあります（MILOKU、103サイト調査）。</p>
+    <h3>5. 検索とAIに正しく読まれる土台を作る</h3>
+    <p>施設名・住所・電話番号の表記を、Google・公式サイト・OTAで一致させること。構造化データ（検索エンジン向けの施設情報の明示）も、未実施の施設が多い領域で、差がつくところです。</p>
+
+    <h2>整備で変わった公開事例</h2>
+    <p><strong>田辺市・熊野エリア（JNTOの事例）</strong>：民宿ごとに英語の情報ページ（客室・食事・風呂・トイレの写真つき）を整え、英語で予約・決済できる仕組みを作った結果、田辺市の外国人延べ宿泊者数は2013年の5,480人泊から2019年には50,926人泊へ、約9.3倍になりました（地域全体の数字です）。</p>
+    <p class="src">出典：日本政府観光局（JNTO）事例ページ</p>
+    <p><strong>注意したい実例もあります。</strong>ある宿ではOTAの掲載チャネルを3から5に増やしても、合計の宿泊数は348泊のまま変わりませんでした。チャネルを増やすことと、見つけてもらえることは別です。中身の整備が先です。</p>
+
+    <h2>自分でやる場合の順番</h2>
+    <p>上の5つは、時間をかければ自分でもできます。順番は「Google → 口コミ返信 → OTAの英語 → 英語ページ → 土台」の順がおすすめです。1つずつ、営業の合間に。</p>
+    <p>時間が取れない場合や、英語の文案まで含めて任せたい場合は、私たち白浜会の無料診断から始めてください。現状を1枚にまとめてお渡しします。診断だけの受け取りでも構いません。</p>
+    <div class="cta-row" style="margin-top:28px">
+      <a class="btn" href="../#contact">無料診断を受ける</a>
+      <span class="muted">無料・診断だけでもOK</span>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p><strong>白浜会</strong> — 代表：南 航平｜和歌山県</p>
+    <p class="note" style="margin-top:24px">最終更新：2026年11月17日<br>© 2026 白浜会</p>
+  </div>
+</footer>
+</body>
+</html>
