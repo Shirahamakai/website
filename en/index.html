@@ -33,14 +33,14 @@
   .cta-row{display:flex;gap:14px 18px;flex-wrap:wrap;align-items:center;margin-top:34px}
   /* hero */
   .hero{background:linear-gradient(180deg,#DFF3FD 0%,var(--paper) 88%);padding:72px 0 100px;border-bottom:1px solid var(--line)}
-  .hero-logo{display:block;width:min(480px,84%);height:auto;border-radius:36px;margin-bottom:30px}
+  .hero-logo{display:block;width:min(480px,84%);height:auto;margin-bottom:30px}
   .hero h1{font-size:clamp(32px,5.6vw,76px);line-height:1.35;max-width:920px}
   .hero .lead{margin-top:28px;font-size:clamp(17px,1.7vw,24px);line-height:1.875;max-width:44em}
   /* footer */
   footer{background:#303B45;color:#DDE7ED;padding:72px 0 48px;font-size:14px}
   footer a{color:#DDE7ED}
   footer .note{color:#9FB2BE}
-  .f-logo{display:block;width:min(280px,72%);height:auto;border-radius:36px;margin-bottom:26px}
+  .f-logo{display:block;width:min(280px,72%);height:auto;border-radius:10px;margin-bottom:26px}
   /* ==== full-screen menu (benchmark spec 2026-11-18) ==== */
   .menu-btn{position:fixed;top:52px;right:72px;z-index:300;width:56px;height:56px;border-radius:50%;border:1px solid var(--line);background:rgba(255,252,245,.94);box-shadow:0 8px 22px rgba(7,103,143,.2);cursor:pointer;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;padding:0}
   .menu-btn span{display:block;width:24px;height:2px;border-radius:2px;background:var(--ink);transition:transform .25s ease}
@@ -49,7 +49,7 @@
   .site-menu{position:fixed;inset:0;z-index:250;background:linear-gradient(155deg,#159ED9 0%,#07678F 82%);color:#fff;padding:104px clamp(24px,7.5vw,109px) 44px;overflow-y:auto;opacity:0;visibility:hidden;transform:translateY(-10px);transition:opacity .3s ease,transform .3s ease,visibility .3s}
   body.menu-open .site-menu{opacity:1;visibility:visible;transform:none}
   body.menu-open{overflow:hidden}
-  .site-menu .menu-logo{width:min(220px,52vw);height:auto;border-radius:24px;display:block;margin-bottom:32px}
+  .site-menu .menu-logo{width:min(220px,52vw);height:auto;border-radius:10px;display:block;margin-bottom:32px}
   .site-menu nav{display:flex;flex-direction:column;align-items:flex-start;gap:2px}
   .site-menu .mlink{font-family:"Zen Maru Gothic","Hiragino Maru Gothic ProN","Hiragino Sans","Noto Sans JP",sans-serif;font-weight:900;font-size:clamp(25px,4.2vw,40px);line-height:1.45;color:#fff;text-decoration:none;padding:4px 0}
   .site-menu .mlink:hover{color:var(--accent)}

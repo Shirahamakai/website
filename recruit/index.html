@@ -48,7 +48,7 @@
   .site-menu{position:fixed;inset:0;z-index:250;background:linear-gradient(155deg,#159ED9 0%,#07678F 82%);color:#fff;padding:104px clamp(24px,7.5vw,109px) 44px;overflow-y:auto;opacity:0;visibility:hidden;transform:translateY(-10px);transition:opacity .3s ease,transform .3s ease,visibility .3s}
   body.menu-open .site-menu{opacity:1;visibility:visible;transform:none}
   body.menu-open{overflow:hidden}
-  .site-menu .menu-logo{width:min(220px,52vw);height:auto;border-radius:24px;display:block;margin-bottom:32px}
+  .site-menu .menu-logo{width:min(220px,52vw);height:auto;border-radius:999px;display:block;margin-bottom:32px}
   .site-menu nav{display:flex;flex-direction:column;align-items:flex-start;gap:2px}
   .site-menu .mlink{font-family:"Zen Maru Gothic","Hiragino Maru Gothic ProN","Hiragino Sans","Noto Sans JP",sans-serif;font-weight:900;font-size:clamp(25px,4.2vw,40px);line-height:1.45;color:#fff;text-decoration:none;padding:4px 0}
   .site-menu .mlink:hover{color:var(--yellow)}
@@ -63,8 +63,8 @@
   .overline { color: var(--link); font-size: .8rem; font-weight: 900; letter-spacing: .18em; margin-bottom: 10px; }
   .hero { background: linear-gradient(160deg, var(--water), var(--paper) 84%); }
   .hero figure { margin-top: clamp(28px, 4vw, 44px); }
-  .hero .hero-logo { display: block; width: min(480px, 84%); height: auto; border-radius: 36px; box-shadow: none; margin-bottom: 26px; }
-  .hero img { border-radius: 10px; box-shadow: 0 16px 36px rgba(48,59,69,.14); }
+  .hero .hero-logo { display: block; width: min(480px, 84%); height: auto; border-radius: 999px; box-shadow: none; margin-bottom: 26px; }
+  .hero img { border-radius: 16px; box-shadow: 0 16px 36px rgba(48,59,69,.14); }
   .eyebrow { color: var(--link); margin-bottom: 12px; font-size: .875rem; font-weight: 900; letter-spacing: .08em; }
   .hero-copy, .intro { max-width: 42em; color: var(--muted); }
   .hero-copy { margin-top: 20px; font-size: clamp(1.125rem, 1.7vw, 1.5rem); line-height: 1.875; }
@@ -88,14 +88,14 @@
   .participation dd { color: var(--muted); }
   .contact-note { margin-top: 12px; font-size: .9rem; overflow-wrap: anywhere; }
   footer { background: var(--ink); color: white; padding-block: 56px 48px; font-size: .875rem; }
-  .f-logo { width: min(240px, 60vw); height: auto; border-radius: 36px; }
+  .f-logo { width: min(240px, 60vw); height: auto; border-radius: 999px; }
   footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px 24px; }
   footer a { color: white; }
   footer a:focus-visible { outline-color: var(--yellow); }
   .sticky-cta { display: none; }
   @media (max-width: 700px) {
     .grid { grid-template-columns: 1fr; }
-    .hero img { border-radius: 10px; }
+    .hero img { border-radius: 16px; }
     .sticky-cta { display: block; position: fixed; left: 0; right: 0; bottom: 0; z-index: 60; background: rgba(255,252,245,.97); border-top: 1px solid var(--line); padding: 10px 16px calc(10px + env(safe-area-inset-bottom)); }
     .sticky-cta a { display: block; text-align: center; background: var(--yellow); color: var(--ink); font-weight: 900; text-decoration: none; border-radius: 999px; padding: 13px; }
     footer { padding-bottom: 96px; }
