@@ -31,6 +31,7 @@
   h1, h2, h3, p, figure, dl, dd { margin: 0; }
   h1, h2, h3 { font-family: "Zen Maru Gothic", "Hiragino Maru Gothic ProN", "Noto Sans JP", sans-serif; font-weight: 900; line-height: 1.35; }
   h1 { font-size: clamp(2.375rem, 5.6vw, 4.75rem); letter-spacing: -.025em; }
+  .h1-line { display: block; white-space: nowrap; }
   h2 { font-size: clamp(1.6rem, 3vw, 2.25rem); margin-bottom: .7em; }
   h3 { font-size: 1.25rem; margin-bottom: .4em; }
   a { color: var(--link); text-underline-offset: .2em; }
@@ -94,6 +95,7 @@
   footer a:focus-visible { outline-color: var(--yellow); }
   .sticky-cta { display: none; }
   @media (max-width: 700px) {
+    h1 { font-size: clamp(1.75rem, 8vw, 2.375rem); }
     .grid { grid-template-columns: 1fr; }
     .sticky-cta { display: block; position: fixed; left: 0; right: 0; bottom: 0; z-index: 60; background: rgba(255,252,245,.97); border-top: 1px solid var(--line); padding: 10px 16px calc(10px + env(safe-area-inset-bottom)); }
     .sticky-cta a { display: block; text-align: center; background: var(--yellow); color: var(--ink); font-weight: 900; text-decoration: none; border-radius: 999px; padding: 13px; }
@@ -129,7 +131,7 @@
     <div class="wrap">
       <div class="hero-panel">
         <p class="eyebrow">白浜会 メンバー募集</p>
-        <h1>白浜と熊野を伝える<br>仲間を募集します</h1>
+        <h1><span class="h1-line">白浜と熊野を伝える</span><span class="h1-line">仲間を募集します</span></h1>
         <p class="hero-copy">白浜・熊野の景色や人を届ける地域メディア「Shirahama Days」を運営しています。出演・撮影・編集・企画——興味のある役割から、一緒に始めませんか。</p>
         <div class="actions">
           <a class="button" href="#apply">参加について相談する</a>
