@@ -62,10 +62,10 @@
   main > section { padding-block: clamp(56px, 8vw, 100px); }
   section[id] { scroll-margin-top: 16px; }
   .overline { color: var(--link); font-size: .8rem; font-weight: 900; letter-spacing: .18em; margin-bottom: 10px; }
-  /* hero: key visual first at full width (whole artwork visible), panel flows below it — same structure as CHOCOLATE Inc. (full-screen hero visual, white panel underneath) */
+  /* hero: CHOCOLATE type — visual fills 72% of the first screen (CHOCOLATE Inc. measured 71.9% of viewport height), then a flat text band follows with gap 0 and ~39px top padding (measured at 1440). Desktop crops the artwork with cover at background-position center: verified the wordmark band (artwork y 22-78%, x 11-89%) stays fully visible at 1919x998 (visible y 16.7-83.3%) and 1440x900 (visible y 10.0-90.0%). Mobile keeps the whole artwork at its natural ratio. */
   .hero { background: var(--paper); padding-block: 0 clamp(56px, 8vw, 100px); }
-  .hero-visual { width: 100%; aspect-ratio: 1672 / 941; background: url("../assets/key-visual.webp") center / cover no-repeat; }
-  .hero-panel { max-width: 46em; margin-top: clamp(24px, 4vw, 40px); padding: clamp(24px, 4vw, 40px); background: var(--paper); border: 1px solid var(--line); border-radius: 10px; box-shadow: 0 16px 36px rgba(48,59,69,.14); }
+  .hero-visual { width: 100%; height: 72svh; background: url("../assets/key-visual.webp") center / cover no-repeat; }
+  .hero-panel { max-width: 46em; margin-top: 0; padding-top: 39px; }
   .eyebrow { color: var(--link); margin-bottom: 12px; font-size: .875rem; font-weight: 900; letter-spacing: .08em; }
   .hero-copy, .intro { max-width: 42em; color: var(--muted); }
   .hero-copy { margin-top: 20px; font-size: clamp(1.125rem, 1.7vw, 1.5rem); line-height: 1.875; }
@@ -95,6 +95,7 @@
   footer a:focus-visible { outline-color: var(--yellow); }
   .sticky-cta { display: none; }
   @media (max-width: 700px) {
+    .hero-visual { height: auto; aspect-ratio: 1672 / 941; }
     h1 { font-size: clamp(1.75rem, 8vw, 2.375rem); }
     .grid { grid-template-columns: 1fr; }
     .sticky-cta { display: block; position: fixed; left: 0; right: 0; bottom: 0; z-index: 60; background: rgba(255,252,245,.97); border-top: 1px solid var(--line); padding: 10px 16px calc(10px + env(safe-area-inset-bottom)); }
