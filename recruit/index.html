@@ -61,10 +61,9 @@
   main > section { padding-block: clamp(56px, 8vw, 100px); }
   section[id] { scroll-margin-top: 16px; }
   .overline { color: var(--link); font-size: .8rem; font-weight: 900; letter-spacing: .18em; margin-bottom: 10px; }
-  .hero { background: linear-gradient(160deg, var(--water), var(--paper) 84%); }
-  .hero figure { margin-top: clamp(28px, 4vw, 44px); }
-  .hero .hero-logo { display: block; width: min(480px, 84%); height: auto; border-radius: 999px; box-shadow: none; margin-bottom: 26px; }
-  .hero img { border-radius: 16px; box-shadow: 0 16px 36px rgba(48,59,69,.14); }
+  .hero { background: var(--paper); padding-block: 0 clamp(56px, 8vw, 100px); }
+  .hero-visual { aspect-ratio: 1672 / 941; max-height: 86vh; background: url("../assets/key-visual.webp") center / cover no-repeat; }
+  .hero-panel { position: relative; max-width: 46em; margin-top: calc(-1 * clamp(24px, 5vw, 72px)); padding: clamp(24px, 4vw, 40px); background: var(--paper); border: 1px solid var(--line); border-radius: 10px; box-shadow: 0 16px 36px rgba(48,59,69,.14); }
   .eyebrow { color: var(--link); margin-bottom: 12px; font-size: .875rem; font-weight: 900; letter-spacing: .08em; }
   .hero-copy, .intro { max-width: 42em; color: var(--muted); }
   .hero-copy { margin-top: 20px; font-size: clamp(1.125rem, 1.7vw, 1.5rem); line-height: 1.875; }
@@ -95,7 +94,6 @@
   .sticky-cta { display: none; }
   @media (max-width: 700px) {
     .grid { grid-template-columns: 1fr; }
-    .hero img { border-radius: 16px; }
     .sticky-cta { display: block; position: fixed; left: 0; right: 0; bottom: 0; z-index: 60; background: rgba(255,252,245,.97); border-top: 1px solid var(--line); padding: 10px 16px calc(10px + env(safe-area-inset-bottom)); }
     .sticky-cta a { display: block; text-align: center; background: var(--yellow); color: var(--ink); font-weight: 900; text-decoration: none; border-radius: 999px; padding: 13px; }
     footer { padding-bottom: 96px; }
@@ -126,9 +124,9 @@
 
 <main id="main">
   <section class="hero">
+    <div class="hero-visual" role="img" aria-label="白良浜の海と空を描いた白浜会のキービジュアル"></div>
     <div class="wrap">
-      <div>
-        <img class="hero-logo" src="../assets/wordmark.webp" width="1000" height="424" alt="白浜会">
+      <div class="hero-panel">
         <p class="eyebrow">白浜会 メンバー募集</p>
         <h1>白浜と熊野を伝える<br>仲間を募集します</h1>
         <p class="hero-copy">白浜・熊野の景色や人を届ける地域メディア「Shirahama Days」を運営しています。出演・撮影・編集・企画——興味のある役割から、一緒に始めませんか。</p>
@@ -137,9 +135,6 @@
           <a href="https://www.instagram.com/shirahama.days/">Instagramで活動を見る</a>
         </div>
       </div>
-      <figure>
-        <img src="../assets/key-visual.webp" width="1672" height="941" alt="白良浜の海と空を描いた白浜会のキービジュアル">
-      </figure>
     </div>
   </section>
 
