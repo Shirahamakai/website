@@ -14,44 +14,51 @@
     --sea:#159ED9; --sea-d:#07678F;
     --cream:#EAF6FD; --cream2:#FFF6D8; --line:#DCEEF7;
     --accent:#FFC83D; --accent-d:#F2B21B;
-    --radius:18px;
+    --radius:10px;
   }
   *{margin:0;padding:0;box-sizing:border-box}
   html{scroll-behavior:smooth}
   body{font-family:"Hiragino Sans","Hiragino Kaku Gothic ProN","Noto Sans JP",sans-serif;color:var(--ink);line-height:1.85;background:#FFFCF5;-webkit-font-smoothing:antialiased}
   :focus-visible{outline:2.5px solid var(--sea);outline-offset:2px;border-radius:2px}
   .mincho{font-family:"Zen Maru Gothic","Hiragino Maru Gothic ProN","Hiragino Sans","Noto Sans JP",sans-serif}
-  .wrap{max-width:1020px;margin:0 auto;padding:0 24px}
-  section{padding:96px 0;scroll-margin-top:92px}
-  #contact{scroll-margin-top:92px}
+  .wrap{max-width:1210px;margin:0 auto;padding:0 24px}
+  section{padding:100px 0;scroll-margin-top:24px}
+  #contact{scroll-margin-top:24px}
   .overline{font-size:12px;font-weight:700;letter-spacing:.3em;color:var(--sea-d);margin-bottom:12px}
   h2{font-family:"Zen Maru Gothic","Hiragino Maru Gothic ProN","Hiragino Sans","Noto Sans JP",sans-serif;font-size:30px;line-height:1.5;font-weight:900;margin-bottom:16px}
   .lead{color:var(--ink2);max-width:700px;font-size:15.5px}
-  /* header */
-  header{position:sticky;top:0;z-index:50;background:rgba(255,252,245,.96);border-bottom:3px solid var(--accent)}
-  header .wrap{display:flex;justify-content:space-between;align-items:center;padding-top:14px;padding-bottom:14px}
-  .logo{display:flex;align-items:center;gap:12px}
-  .logo-img{height:48px;width:auto;border-radius:12px;display:block}
-  .logo-sub{font-size:10px;letter-spacing:.34em;color:var(--faint);font-weight:700}
-  
-  nav{display:flex;gap:clamp(10px,1.6vw,22px);align-items:center}
-  nav a{color:var(--ink);text-decoration:none;font-size:13.5px;font-weight:600}
-  nav a:hover{color:var(--sea-d)}
-  nav a.nav-cta{border:2px solid var(--accent);color:var(--ink);padding:7px 18px;border-radius:999px;font-weight:700;background:#FFF8E1}
-  nav a.nav-cta:hover{background:var(--accent);color:var(--ink)}
+  /* ==== full-screen menu (benchmark spec 2026-11-18) ==== */
+  .menu-btn{position:fixed;top:52px;right:72px;z-index:300;width:56px;height:56px;border-radius:50%;border:1px solid var(--line);background:rgba(255,252,245,.94);box-shadow:0 8px 22px rgba(7,103,143,.2);cursor:pointer;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;padding:0}
+  .menu-btn span{display:block;width:24px;height:2px;border-radius:2px;background:var(--ink);transition:transform .25s ease}
+  body.menu-open .menu-btn span:first-child{transform:translateY(5px) rotate(45deg)}
+  body.menu-open .menu-btn span:last-child{transform:translateY(-5px) rotate(-45deg)}
+  .site-menu{position:fixed;inset:0;z-index:250;background:linear-gradient(155deg,#159ED9 0%,#07678F 82%);color:#fff;padding:104px clamp(24px,7.5vw,109px) 44px;overflow-y:auto;opacity:0;visibility:hidden;transform:translateY(-10px);transition:opacity .3s ease,transform .3s ease,visibility .3s}
+  body.menu-open .site-menu{opacity:1;visibility:visible;transform:none}
+  body.menu-open{overflow:hidden}
+  .site-menu .menu-logo{width:min(220px,52vw);height:auto;border-radius:10px;display:block;margin-bottom:32px}
+  .site-menu nav{display:flex;flex-direction:column;align-items:flex-start;gap:2px}
+  .site-menu .mlink{font-family:"Zen Maru Gothic","Hiragino Maru Gothic ProN","Hiragino Sans","Noto Sans JP",sans-serif;font-weight:900;font-size:clamp(25px,4.2vw,40px);line-height:1.45;color:#fff;text-decoration:none;padding:4px 0}
+  .site-menu .mlink:hover{color:var(--accent)}
+  .site-menu .mcta{display:inline-block;margin-top:30px;background:var(--accent);color:var(--ink);font-weight:700;font-size:17px;padding:16px 40px;border-radius:999px;text-decoration:none;box-shadow:0 8px 20px rgba(0,0,0,.18)}
+  .site-menu .mcta:hover{background:var(--accent-d)}
+  .site-menu .menu-sub{margin-top:32px;display:flex;flex-wrap:wrap;gap:10px 24px}
+  .site-menu .menu-sub a{color:rgba(255,255,255,.88);font-size:14px;font-weight:700;text-decoration:none}
+  .site-menu .menu-sub a:hover{color:#fff;text-decoration:underline}
+  @media (max-width:760px){.menu-btn{top:20px;right:20px;width:52px;height:52px}.site-menu{padding-top:88px}}
   /* hero */
-  .hero{background:linear-gradient(180deg,#DFF3FD 0%,#FFFCF5 82%);padding:84px 0 0;border-bottom:1px solid var(--line)}
+  .hero{background:linear-gradient(180deg,#DFF3FD 0%,#FFFCF5 82%);padding:72px 0 0;border-bottom:1px solid var(--line)}
+  .hero-logo{display:block;width:min(560px,88%);height:auto;margin-bottom:30px}
   .hero .area{font-size:13px;font-weight:700;letter-spacing:.26em;color:var(--sea-d);margin-bottom:26px}
-  .hero h1{font-family:"Zen Maru Gothic","Hiragino Maru Gothic ProN","Hiragino Sans","Noto Sans JP",sans-serif;font-size:42px;line-height:1.55;font-weight:900;max-width:720px}
+  .hero h1{font-family:"Zen Maru Gothic","Hiragino Maru Gothic ProN","Hiragino Sans","Noto Sans JP",sans-serif;font-size:clamp(32px,5.6vw,76px);line-height:1.35;font-weight:900;max-width:920px}
   .hero h1 .u{border-bottom:4px solid var(--accent);padding-bottom:2px}
-  .hero .sub{margin-top:26px;font-size:16px;color:var(--ink2);max-width:640px}
+  .hero .sub{margin-top:28px;font-size:clamp(17px,1.7vw,24px);line-height:1.875;color:var(--ink2);max-width:720px}
   .hero .efficacy{margin-top:14px;font-size:16px;font-weight:700;color:var(--ink);max-width:640px}
   .btns{display:flex;gap:14px;flex-wrap:wrap;margin-top:34px}
-  .cta{display:inline-block;background:var(--accent);color:var(--ink);padding:15px 34px;border-radius:999px;text-decoration:none;font-weight:700;font-size:15.5px;transition:.2s;box-shadow:0 8px 20px rgba(242,178,27,.35)}
+  .cta{display:inline-block;background:var(--accent);color:var(--ink);padding:17px 40px;border-radius:999px;text-decoration:none;font-weight:700;font-size:17px;transition:.2s;box-shadow:0 8px 20px rgba(242,178,27,.35)}
   .cta:hover{background:var(--accent-d)}
-  .ghost{display:inline-block;background:#fff;border:2px solid var(--sea);color:var(--sea-d);padding:13.5px 28px;border-radius:999px;text-decoration:none;font-weight:700;font-size:15px}
+  .ghost{display:inline-block;background:#fff;border:2px solid var(--sea);color:var(--sea-d);padding:15px 36px;border-radius:999px;text-decoration:none;font-weight:700;font-size:15px}
   .ghost:hover{background:var(--sea-d);color:#fff}
-  .hero-photo{margin-top:56px;height:400px;background:url("assets/key-visual.webp") center 42%/cover no-repeat}
+  .hero-photo{margin:56px auto 0;width:calc(100% - 48px);max-width:1210px;height:440px;border-radius:10px;background:url("assets/key-visual.webp") center 42%/cover no-repeat}
   .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;padding:30px 0 36px}
   .stat{border-top:2px solid var(--sea);padding-top:12px}
   .stat b{display:block;font-family:"Zen Maru Gothic","Hiragino Maru Gothic ProN","Hiragino Sans","Noto Sans JP",sans-serif;font-size:23px;line-height:1.35;font-weight:600}
@@ -90,12 +97,14 @@
   .step h3{font-size:16.5px;margin:6px 0 6px;font-weight:700}
   .step p{font-size:14px;color:var(--ink2)}
   /* cta band */
-  .band{background:linear-gradient(135deg,#1074A1 0%,#07678F 100%);color:#fff;text-align:center;padding:84px 0}
-  .band h2{color:#fff}
-  .band p{color:#EAF7FE;max-width:560px;margin:0 auto;font-size:15px}
-  .band .cta{margin-top:28px}
+  .band{padding:10px 0 100px}
+  .band-card{background:linear-gradient(135deg,#1074A1 0%,#07678F 100%);color:#fff;border-radius:10px;padding:clamp(40px,6vw,64px)}
+  .band-card h2{color:#fff;font-size:clamp(26px,3.4vw,38px)}
+  .band-card p{color:#EAF7FE;max-width:640px;font-size:16px}
+  .band-card .cta{margin-top:30px}
   /* footer */
-  footer{background:#303B45;color:#DDE7ED;padding:56px 0 42px;font-size:14px}
+  footer{background:#303B45;color:#DDE7ED;padding:72px 0 48px;font-size:14px}
+  .f-logo{display:block;width:min(280px,72%);height:auto;border-radius:10px;margin-bottom:26px}
   footer a{color:#DDE7ED;overflow-wrap:anywhere}
   footer a:focus-visible{outline-color:var(--accent)}
   footer a.cta{color:var(--ink)}
@@ -104,13 +113,11 @@
   /* mobile */
   .sticky-cta{display:none}
   @media (max-width:760px){
-    .logo-img{height:40px}
-    nav a:not(.nav-cta){display:none}
     .hero{padding-top:56px}
-    .hero h1{font-size:29px;line-height:1.6}
     .hero-photo{height:220px;margin-top:38px}
     .stats{grid-template-columns:1fr;gap:16px}
     section{padding:64px 0}
+    .band{padding-bottom:64px}
     h2{font-size:25px}
     .sheet{padding:24px 20px}
     .sticky-cta{display:block;position:fixed;left:0;right:0;bottom:0;z-index:60;background:rgba(255,252,245,.97);border-top:1px solid var(--line);padding:10px 16px calc(10px + env(safe-area-inset-bottom))}
@@ -152,22 +159,29 @@
 </script>
 </head>
 <body>
-<header>
-  <div class="wrap">
-    <div class="logo"><img class="logo-img" src="assets/wordmark.webp" width="1000" height="424" alt="白浜会"><span class="logo-sub">SHIRAHAMAKAI</span></div>
-    <nav>
-      <a href="#service">サービス</a>
-      <a href="#sample">診断サンプル</a>
-      <a href="#price">料金</a>
-      <a href="#faq">よくある質問</a>
-      <a href="#about">私たちについて</a>
-      <a class="nav-cta" href="#contact">無料診断</a>
-    </nav>
+<button class="menu-btn" type="button" aria-expanded="false" aria-controls="site-menu" aria-label="メニューを開く"><span></span><span></span></button>
+<div class="site-menu" id="site-menu" aria-hidden="true">
+  <img class="menu-logo" src="assets/wordmark.webp" width="1000" height="424" alt="白浜会">
+  <nav aria-label="サイトメニュー">
+    <a class="mlink" href="#service">サービス</a>
+    <a class="mlink" href="#sample">診断サンプル</a>
+    <a class="mlink" href="#price">料金</a>
+    <a class="mlink" href="#compare">進め方の比較</a>
+    <a class="mlink" href="#faq">よくある質問</a>
+    <a class="mlink" href="#about">私たちについて</a>
+  </nav>
+  <a class="mcta" href="#contact">無料診断を受ける</a>
+  <div class="menu-sub">
+    <a href="guide/">ガイド</a>
+    <a href="recruit/">大学生メンバー募集</a>
+    <a href="beach/">海の家しららはま</a>
+    <a href="en/">English</a>
   </div>
-</header>
+</div>
 
 <div class="hero">
   <div class="wrap">
+    <img class="hero-logo" src="assets/wordmark.webp" width="1000" height="424" alt="白浜会">
     <p class="area">南紀・熊野・白浜の、小規模な宿専門</p>
     <h1>外国人客は、もう来ています。<br>あとは<span class="u">「見つけてもらえる」</span>かどうかです。</h1>
     <p class="sub">白浜会は、南紀・熊野・白浜エリアの小規模な宿・体験事業者のために、Googleマップ、OTA（Booking.com等）、英語ページの整備をお手伝いします。立派なホームページを作ることが目的ではありません。外国人客の予約行動に、あなたの宿を接続することが目的です。</p>
@@ -300,9 +314,11 @@
 
 <div class="band">
   <div class="wrap">
+    <div class="band-card">
     <h2>まずは、あなたの宿の現状を知ることから。</h2>
     <p>無料診断では、外国人客からどう見えているかを実査して1枚にまとめます。結果だけ受け取っていただいて構いません。</p>
     <a class="cta" href="#contact">無料診断を受ける</a>
+    </div>
   </div>
 </div>
 
@@ -322,6 +338,7 @@
 
 <footer id="contact">
   <div class="wrap">
+    <img class="f-logo" src="assets/wordmark.webp" width="1000" height="424" alt="白浜会">
     <h2 class="f-title">無料診断のお申し込み・ご相談</h2>
     <p>施設名と所在地をメールでお送りください。公式サイトや予約ページがあれば、URLも添えていただけると確認がスムーズです。</p>
     <p><a class="cta" href="mailto:shirahamakai2027@gmail.com?subject=%E7%99%BD%E6%B5%9C%E4%BC%9A%20%E7%84%A1%E6%96%99%E8%A8%BA%E6%96%AD%E3%81%AE%E7%94%B3%E3%81%97%E8%BE%BC%E3%81%BF">メールで無料診断を申し込む</a></p>
@@ -333,5 +350,21 @@
 </footer>
 
 <div class="sticky-cta"><a href="#contact">無料診断を受ける</a></div>
+<script>
+(function(){
+  var btn=document.querySelector('.menu-btn');
+  var menu=document.getElementById('site-menu');
+  if(!btn||!menu){return}
+  function setOpen(open){
+    document.body.classList.toggle('menu-open',open);
+    btn.setAttribute('aria-expanded',open?'true':'false');
+    btn.setAttribute('aria-label',open?'メニューを閉じる':'メニューを開く');
+    menu.setAttribute('aria-hidden',open?'false':'true');
+  }
+  btn.addEventListener('click',function(){setOpen(!document.body.classList.contains('menu-open'))});
+  menu.addEventListener('click',function(e){if(e.target.closest('a')){setOpen(false)}});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'){setOpen(false)}});
+})();
+</script>
 </body>
 </html>
