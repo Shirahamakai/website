@@ -68,9 +68,10 @@
   main > section { padding-block: clamp(56px, 8vw, 100px); }
   section[id] { scroll-margin-top: 16px; }
   .overline { color: var(--link); font-size: .8rem; font-weight: 900; letter-spacing: .18em; margin-bottom: 10px; }
-  /* hero: CHOCOLATE type — visual fills 72% of the first screen (CHOCOLATE Inc. measured 71.9% of viewport height), then a flat text band follows with gap 0 and ~39px top padding (measured at 1440). Desktop crops the artwork with cover at background-position center: verified the wordmark band (artwork y 22-78%, x 11-89%) stays fully visible at 1919x998 (visible y 16.7-83.3%) and 1440x900 (visible y 10.0-90.0%). Mobile keeps the whole artwork at its natural ratio. */
+  /* Website artwork keeps its full composition; mobile uses the original 16:9 artwork. */
   .hero { background: var(--paper); padding-block: 0 clamp(56px, 8vw, 100px); }
-  .hero-visual { width: 100%; height: 72svh; background: url("../assets/key-visual.webp") center / cover no-repeat; }
+  .hero-visual { display: block; width: 100%; }
+  .hero-visual img { display: block; width: 100%; height: auto; }
   .hero-panel { max-width: 46em; margin-top: 0; padding-top: 39px; }
   .eyebrow { color: var(--link); margin-bottom: 12px; font-size: .875rem; font-weight: 900; letter-spacing: .08em; }
   .hero-copy, .intro { max-width: 42em; color: var(--muted); }
@@ -118,7 +119,6 @@
   footer a:focus-visible { outline-color: var(--yellow); }
   .sticky-cta { display: none; }
   @media (max-width: 700px) {
-    .hero-visual { height: auto; aspect-ratio: 1672 / 941; }
     h1 { font-size: clamp(1.75rem, 8vw, 2.375rem); }
     .grid { grid-template-columns: 1fr; }
     .sticky-cta { display: block; position: fixed; left: 0; right: 0; bottom: 0; z-index: 60; background: rgba(255,252,245,.97); border-top: 1px solid var(--line); padding: 10px 16px calc(10px + env(safe-area-inset-bottom)); }
@@ -160,7 +160,10 @@
 
 <main id="main">
   <section class="hero">
-    <div class="hero-visual" role="img" aria-label="白良浜の海と空を描いた白浜会のキービジュアル"></div>
+    <picture class="hero-visual">
+      <source media="(min-width: 701px)" srcset="../assets/recruit-hero-desktop.webp" width="1983" height="793">
+      <img src="../assets/key-visual.webp" width="1672" height="941" alt="白浜会のロゴと、白良浜を見渡す大学生5人のイラスト" fetchpriority="high">
+    </picture>
     <div class="wrap">
       <div class="hero-panel">
         <p class="eyebrow">白浜会 メンバー募集</p>
